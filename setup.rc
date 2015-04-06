@@ -2,7 +2,7 @@
 
 # Install required Debian packages
 _packages=
-_packages="$_packages nginx backuppc"
+_packages="$_packages nginx fcgiwrap backuppc"
 
 sysconf_require_packages $_packages
 
