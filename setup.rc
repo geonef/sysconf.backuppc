@@ -1,0 +1,7 @@
+# Installer script for sysconf layer sysconf.backuppc    -*- shell-script -*-
+
+# Install required Debian packages
+_packages=
+_packages="$_packages backuppc"
+
+sysconf_require_packages $_packages
