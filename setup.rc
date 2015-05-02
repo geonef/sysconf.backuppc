@@ -12,6 +12,9 @@ fi
 
 if [ ! -d /etc/backuppc/.git ]; then
     git init /etc/backuppc
+    cd /etc/backuppc
+    git add -A
+    git commit -m "automatic initial commit from BackupPC distrib conf"
 fi
 
 # Fix Nginx
