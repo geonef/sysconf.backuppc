@@ -5,6 +5,11 @@ _packages=
 _packages="$_packages nginx fcgiwrap backuppc par bzip2"
 
 sysconf_require_packages $_packages
+dpkg -l | grep -q apache2 && apt-get purge --yes apache2
+
+if [ ! -d /etc/backuppc ]; then
+    git init /etc/backuppc
+fi
 
 # Fix Nginx
 _force_nginx_restart=no
