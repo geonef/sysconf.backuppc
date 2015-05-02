@@ -10,7 +10,7 @@ if dpkg -l | grep -q apache2; then
     apt-get purge --yes apache2
 fi
 
-if [ ! -d /etc/backuppc ]; then
+if [ ! -d /etc/backuppc/.git ]; then
     git init /etc/backuppc
 fi
 
