@@ -5,7 +5,10 @@ _packages=
 _packages="$_packages nginx fcgiwrap backuppc par bzip2"
 
 sysconf_require_packages $_packages
-dpkg -l | grep -q apache2 && apt-get purge --yes apache2
+if dpkg -l | grep -q apache2; then
+    service apache2 stop
+    apt-get purge --yes apache2
+fi
 
 if [ ! -d /etc/backuppc ]; then
     git init /etc/backuppc
