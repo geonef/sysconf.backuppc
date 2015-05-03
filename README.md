@@ -17,6 +17,13 @@ Then, update the ```deps``` file to tell Sysconf to use it:
 echo sysconf.backuppc >>actual/deps
 ```
 
+## Important things to know
+
+The hosts to backup should be accessed once manuelly before the
+backups could take place. Because SSH will ask "Are you sure you want
+to continue connecting" when it does not know the host.
+
+
 ## Authors and history
 
 * 20150406 Created by JF Gigand <jf@geonef.fr>
