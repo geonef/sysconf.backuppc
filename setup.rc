@@ -8,7 +8,7 @@ sysconf_require_packages $_packages
 
 if dpkg -l | grep -q apache2; then
     service apache2 stop
-    apt-get purge --yes apache2
+    apt-get purge --yes apache2 apache2-mpm-worker apache2-utils apache2.2-bin apache2.2-common
 fi
 
 if [ ! -d /etc/backuppc/.git ]; then
